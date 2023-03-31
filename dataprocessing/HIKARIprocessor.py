@@ -20,4 +20,4 @@ for i in tqdm (range(rows),desc="Loading..."):
 
 df = df.apply(pd.to_numeric)
 
-df.to_csv('dataprocessing/proc_csvfiles/processedcsv/HIKARIprocessed.csv', index=False)
+df.to_csv('dataprocessing/proc_csvfiles/HIKARIprocessed.csv', index=False)
