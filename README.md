@@ -1,7 +1,7 @@
 # capstoneV2
 
 TO START:
-run all three .py files in dataprocessing to create the three csv files. you can later store these locally and call in with a custom path.
+run the STARTUP.py file to load all .csv's
 
 As for the original csv files found on google docs, get the path to the file and insert it to the respective processor.py file
 
