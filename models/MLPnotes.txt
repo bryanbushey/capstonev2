@@ -1,0 +1,65 @@
+Using Version 2 of the CSV files
+
+model = MLPClassifier(hidden_layer_sizes=(12, 12, 12), max_iter=500,verbose=1)
+    returned 
+    score on test data:  0.6533581288892067
+    [[665818  96566]
+    [266914  19277]]
+
+model = MLPClassifier(hidden_layer_sizes=(50, 40, 30), max_iter=500,verbose=1)
+    returned
+    score on test data:  0.7115695110030279
+    [[593147 169237]
+    [133204 152987]]
+    read online that the first hidden layer should have nodes equal to or greater than features in the dataset.
+    So i changed the first one to 50
+
+hidden_layer_sizes=(50,55) - 50.579 Seconds
+    returned   
+    score on test data:  0.5889192475502467
+    [[612462 149922]
+    [281127   5064]]
+
+hidden_layer_sizes=(50, 60, 70, 80, 100) - 91 seconds
+    returned
+    score on test data:  0.47247550246763464
+    [[209262 553122]
+    [    27 286164]]
+ 
+model = MLPClassifier(hidden_layer_sizes=(50, 40, 30), max_iter=500,verbose=1)
+    score on test data:  0.7076365543714088
+    [[456940 305444]
+    [  1121 285070]]
+                precision    recall  f1-score   support
+
+            0       1.00      0.60      0.75    762384
+            1       0.48      1.00      0.65    286191
+
+        accuracy                           0.71   1048575
+    macro avg       0.74      0.80      0.70   1048575
+    weighted avg       0.86      0.71      0.72   1048575
+
+    score on test data:  0.48929165772596145
+    [[226907 535477]
+    [    39 286152]]
+                precision    recall  f1-score   support
+
+            0       1.00      0.30      0.46    762384
+            1       0.35      1.00      0.52    286191
+hidden_layer_sizes=(50, 40, 35, 30, 25)
+    accuracy                           0.49   1048575
+    macro avg       0.67      0.65      0.49   1048575
+    weighted avg       0.82      0.49      0.47   1048575
+
+hidden_layer_sizes=(50, 40, 35, 30)
+    score on test data:  0.7442033235581623
+    [[495841 266543]
+    [  1679 284512]]
+                precision    recall  f1-score   support
+
+            0       1.00      0.65      0.79    762384
+            1       0.52      0.99      0.68    286191
+
+    accuracy                           0.74   1048575
+    macro avg       0.76      0.82      0.73   1048575
+    weighted avg       0.87      0.74      0.76   1048575

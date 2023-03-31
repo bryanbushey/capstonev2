@@ -6,7 +6,6 @@ from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-
 import MLP_createCIC2017Model
 
 def main():
@@ -20,13 +19,11 @@ def main():
     x = df
     y = dftarget
 
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
-
-    y_predict = model.predict(x_test)
+    y_pred = model.predict(x)
     
-    test_score = accuracy_score(y_test,y_predict)
+    test_score = accuracy_score(y,y_pred)
     print("score on test data: ", test_score)
-    print(confusion_matrix(y_test,y_predict))
+    print(confusion_matrix(y,y_pred))
+    print(classification_report(y, y_pred))
     
 main()
-    
