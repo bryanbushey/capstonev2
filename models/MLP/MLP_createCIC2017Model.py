@@ -15,7 +15,7 @@ def main():
     x_train = df
     y_train = dftarget
     
-    model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=.0003)
+    model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=.0002)
     
     model.fit(x_train, y_train)
     return model
