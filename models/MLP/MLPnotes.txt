@@ -106,7 +106,7 @@ model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='ada
     macro avg       0.67      0.64      0.47   1048575
     weighted avg       0.82      0.48      0.46   1048575
 
-Same as above, but tol=.0002
+model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=.0002)
     score on test data:  0.8159483108027561
     [[587094 175290]
     [ 17702 268489]]
