@@ -1,0 +1,5 @@
+RFmodel001
+model = RandomForestClassifier(verbose=1)
+[[730165  32219]
+ [286191      0]]
+

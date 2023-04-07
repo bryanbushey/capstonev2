@@ -13,7 +13,18 @@ model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='ada
     Sets iteraations to 200
     46%
 
-model0004
-model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=0, max_iter=1000, n_iter_no_change=1000, batch_size=128)
-    sets iterations to 1000
-    49% - 40 minutes
+model004
+model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=0, batch_size='auto')
+    ran 28 iterations
+    46%
+
+model005
+model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=0.00001, batch_size=128)
+    ran 19 iteraations
+    62%
+
+model006
+model = MLPClassifier(hidden_layer_sizes=(50, 40, 35, 30),verbose=1, solver='adam', tol=0.00001, batch_size=64)
+    ran 15 iteraations
+    40%
+

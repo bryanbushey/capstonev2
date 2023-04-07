@@ -9,7 +9,6 @@ import pickle
 def main():
     df = pd.read_csv('dataprocessing/proc_csvfiles/CIC2018processed.csv')
     del df['flow_pkts_per_sec'] # this column was found to contain NaN values
-
     dftarget = df['attack']
     del df['attack']
 
@@ -18,7 +17,7 @@ def main():
     # sets y = only the ATTACH column
     y = dftarget
 
-    with open('models/MLP/models/MLPmodel003.pkl', 'rb') as f:
+    with open('models/MLP/models/MLPmodel.pkl', 'rb') as f:
         model = pickle.load(f)
 
     # fits the data to the model made by CIC2017
