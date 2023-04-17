@@ -1,7 +1,7 @@
 from tqdm import tqdm
 import pandas as pd
 def main():
-    df = pd.read_csv('/Users/bryan/documents/00-classwork/02-capstone/forGIT/originalcsvfiles/edited2018CIC_Friday-02-03-2018_TrafficForML_CICFlowMeter_original.csv')
+    df = pd.read_csv('/Users/bryan/forGIT/originalcsvfiles/edited2018CIC_Friday-02-03-2018_TrafficForML_CICFlowMeter_original.csv')
     attack_dict=dict() #turns 'protocol_dict' into dictionary
     counter=0
     for attack in df['attack']: #for (data entry ~ protocol) in the column 'protocol_type'

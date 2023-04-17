@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pickle
 
 def main():
-    df = pd.read_csv('dataprocessing/proc_csvfiles/CIC2018processed.csv')
+    df = pd.read_csv('dataprocessing/proc_csvfiles/CIC2017processed.csv')
     dftarget = df['attack']
     del df['attack']
     del df['flow_pkts_per_sec']
@@ -15,7 +15,7 @@ def main():
     x_test = df
     y_test = dftarget
 
-    with open('models/Random Forest/models/RFmodel.pkl', 'rb') as f:
+    with open('models/RandomForest/models/RFmodel.pkl', 'rb') as f:
         model = pickle.load(f)
     
     # fits the data to the model made by CIC2017

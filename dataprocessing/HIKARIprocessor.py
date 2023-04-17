@@ -2,7 +2,7 @@ from tqdm import tqdm
 import pandas as pd
 def main():
     #below is full hikari
-    df = pd.read_csv('/Users/bryan/documents/00-classwork/02-capstone/forGIT/originalcsvfiles/editedHIKARI_ALLFLOWMETER_HIKARI2021_original.csv')
+    df = pd.read_csv('/Users/bryan/forGIT/originalcsvfiles/editedHIKARI_ALLFLOWMETER_HIKARI2021_original.csv')
     #below is 1000 
     #df = pd.read_csv('dataprocessing/originalcsvfiles/editedHIKARI_ALLFLOWMETER_HIKARI2021.csv')
     attack_dict=dict() #turns 'protocol_dict' into dictionary
