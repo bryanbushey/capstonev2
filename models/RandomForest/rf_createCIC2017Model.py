@@ -14,7 +14,7 @@ def main():
     y_train = dftarget
 
     #create tree
-    model = RandomForestClassifier(n_estimators=100, max_depth=10, min_samples_split=2, max_features='auto')
+    model = RandomForestClassifier()
     model.fit(x_train, y_train)
 
     with open('models/RandomForest/models/RFmodel.pkl', 'wb') as f:
