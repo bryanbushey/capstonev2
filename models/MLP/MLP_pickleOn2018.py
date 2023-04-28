@@ -5,6 +5,9 @@ from tqdm import tqdm
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import matplotlib.pyplot as plt
 import pickle
+import sys
+sys.path.append('./dataprocessing')
+import getScores
 
 def main():
     df = pd.read_csv('dataprocessing/proc_csvfiles/CIC2018processed.csv')
@@ -17,18 +20,14 @@ def main():
     # sets y = only the ATTACH column
     y = dftarget
 
-    with open('models/MLP/models/MLPmodel.pkl', 'rb') as f:
+    with open('models/MLP/models/MLPmodel001.pkl', 'rb') as f:
         model = pickle.load(f)
 
     # fits the data to the model made by CIC2017
     y_pred = model.predict(x)
     
-    # Get test scores comparing the true Y with the predicted Y
-    test_score = accuracy_score(y,y_pred)
-    print("score on test data: ", test_score)
-    print(confusion_matrix(y,y_pred))
-    print(classification_report(y, y_pred))
-
+    getScores.main(y,y_pred)
+    
      # Get the loss_curve_ attribute of the MLPClassifier object
     loss_curve_ = model.loss_curve_
 

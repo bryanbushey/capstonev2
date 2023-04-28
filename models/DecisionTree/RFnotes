@@ -1,0 +1,27 @@
+Training on 2017 and testing on 2018
+[[730334  32050]
+ [286191      0]]
+              precision    recall  f1-score   support
+
+           0       0.72      0.96      0.82    762384
+           1       0.00      0.00      0.00    286191
+
+    accuracy                           0.70   1048575
+   macro avg       0.36      0.48      0.41   1048575
+weighted avg       0.52      0.70      0.60   1048575
+
+Training on 2018 testing on 2017
+score on test data:  0.9997076347205918
+[[ 97711      7]
+ [    59 127968]]
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     97718
+           1       1.00      1.00      1.00    128027
+
+    accuracy                           1.00    225745
+   macro avg       1.00      1.00      1.00    225745
+weighted avg       1.00      1.00      1.00    225745
+
+    2018 could contain examples from 2017 and it is better practice to train off of newest data
+
