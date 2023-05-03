@@ -1,5 +1,6 @@
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier 
+from sklearn.datasets import load_iris 
 from sklearn.metrics import classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 import pickle
@@ -9,15 +10,21 @@ def main():
     dftarget = df['attack'] # set target feature
     del df['attack'] # delete reduntant feature from original df
     del df['flow_pkts_per_sec'] # delete NaN column
+    iris = load_iris() 
+    
     #Random Forest WITHOUT NORMALIZATION
-    x_train = df
-    y_train = dftarget
+    
+    data = df
+    target = dftarget
+
+    X = iris.data 
+    y = iris.target
 
     #create tree
-    model = RandomForestClassifier()
-    model.fit(x_train, y_train)
+    model = KNeighborsClassifier(n_neighbors=5) 
+    model.fit(X, y)
 
-    with open('models/RandomForest/models/RFmodel.pkl', 'wb') as f:
+    with open('models/KNN/models/KNNmodel.pkl', 'wb') as f:
         pickle.dump(model, f)
 
 main()
